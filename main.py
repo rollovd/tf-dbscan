@@ -3,6 +3,8 @@ import tensorflow as tf
 
 class DBSCAN(tf.keras.Model):
 
+    INPUT_TYPES = ['adjacency_matrix', 'feature_matrix']
+
     def __init__(self, eps: float = 0.4,
                  min_samples: int = 1,
                  input_type: str = 'adjacency_matrix'):
@@ -35,6 +37,7 @@ class DBSCAN(tf.keras.Model):
         self._eps = eps
         self._min_samples = min_samples
         self._input_type = input_type
+        assert self._input_type in self.INPUT_TYPES, "Incorrect string input type..."
 
     def _neighs(self, matrix):
 
