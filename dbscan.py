@@ -23,7 +23,9 @@ class DBSCAN(tf.keras.Model):
             The number of samples (or total weight) in a neighborhood for a point to be considered as a core point.
             This includes the point itself.
 
-        input_type : str List of input types:
+        input_type : str
+
+        List of input types:
         - `adjacency_matrix` - matrix NxN, where each cell is a distance (for instance, cosine similarity)
         between frames (where N is the number of frames)
         - `feature_matrix` - matrix NxM, where each frame is an embedding with the length M
