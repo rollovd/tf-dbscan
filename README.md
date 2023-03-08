@@ -1,6 +1,11 @@
 # tf-dbscan
 Pure Tensorflow 2+ DBSCAN algorithm
 
+Initially this DBSCAN implementation was developed for Face Recognition problem.
+Therefore, this module assumes that a `feature_matrix` containing information about image embeddings will be fed into the algorithm or `adjacency_matrix`, which describes a **cosine distance** between embeddings.
+
+Anyway, I hope this implementation will be useful and helpful a bit.
+
 List of input types:
 - `adjacency_matrix` - matrix NxN, where each cell is a distance (for instance, cosine similarity)
 between frames (where N is the number of frames)
