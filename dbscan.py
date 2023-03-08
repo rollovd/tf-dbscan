@@ -24,12 +24,11 @@ class DBSCAN(tf.keras.Model):
             This includes the point itself.
 
         input_type : str
-
-        List of input types:
-        - `adjacency_matrix` - matrix NxN, where each cell is a distance (for instance, cosine similarity)
-        between frames (where N is the number of frames)
-        - `feature_matrix` - matrix NxM, where each frame is an embedding with the length M
-        (and N is a number of frames)
+            List of input types:
+            - `adjacency_matrix` - matrix NxN, where each cell is a distance (for instance, cosine similarity)
+            between frames (where N is the number of frames)
+            - `feature_matrix` - matrix NxM, where each frame is an embedding with the length M
+            (and N is a number of frames)
 
         """
         super(DBSCAN, self).__init__()
